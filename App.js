@@ -9,11 +9,6 @@ export default function App() {
   const [favorites, setFavorites] = useState([]);
   const [showFavorites, setShowFavorites] = useState(false);
 
-  useEffect(() => {
-    loadFavorites();
-    fetchDog();
-  }, []);
-
   const loadFavorites = async () => {
     try {
       const savedFavorites = await AsyncStorage.getItem('favorites');
@@ -66,6 +61,11 @@ export default function App() {
     }
   };
 
+  useEffect(() => {
+    loadFavorites();
+    fetchDog();
+  }, []);
+
   return (
     <View style={styles.container}>
       {showFavorites ? (
@@ -98,7 +98,7 @@ export default function App() {
           )}
           <View style={styles.buttonRow}>
             <TouchableOpacity style={styles.button} onPress={fetchDog}>
-              <Text style={styles.buttonText}>mais auaus! ⋆˚🐾˖° </Text>
+              <Text style={styles.buttonText}>mais auaus! ⋆˚🐾˖°</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.favButton} onPress={saveToFavorites}>
               <Text style={styles.buttonText}>⭐</Text>
@@ -185,6 +185,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   removeButton: {
+    backgroundColor: '#ff6b6b',
     padding: 5,
     borderRadius: 5,
     marginTop: 5,
