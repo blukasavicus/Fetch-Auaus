@@ -185,7 +185,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   removeButton: {
-    backgroundColor: '#ff6b6b',
     padding: 5,
     borderRadius: 5,
     marginTop: 5,
