@@ -3,6 +3,7 @@
     "name": "dog-app",
     "slug": "dog-app",
     "version": "1.0.0",
+    "runtimeVersion": "52.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -15,9 +16,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.bialu.dogapp"
     },
     "android": {
+      "package": "com.bialu.dogapp",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
